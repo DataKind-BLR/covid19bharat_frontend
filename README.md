@@ -6,6 +6,23 @@
   Here's our data <a href="https://api.covid19india.org">API</a>.
 </p>
 
+## Acknowledgements
+
+The motivation for this project is the amazing <a href='https://www.covid19india.org' target='_blank'>
+ covid19india.org</a>, a volunteer-run effort that compiled essential COVID data from the early days of the
+pandemic up until October, 2021. Their herculean efforts made an enormous difference,
+and are the foundation for this site.  
+
+The amazing volunteers at covid19india.org have retired, but have also
+generously allowed us to fork their website and pipeline code. This is
+our attempt to carry forward their legacy, but there is no official
+connection or endorsement.
+
+<a href='https://www.datakind.org/chapters/datakind-blr'
+target='_blank'>DataKind Bangalore</a> is leading the volunteer
+effort, with additional support from <a
+href='https://www.devdatalab.org' target='_blank'>Development Data Lab</a>.
+
 ## Setup
 
 ```
@@ -14,6 +31,11 @@ yarn install && yarn start
 
 ## Contribution
 
-If you're new to contributing to Open Source on Github, [this guide](https://guides.github.com/activities/contributing-to-open-source/) can help you get started. Please check out the [contribution guide](CONTRIBUTING.md) for more details on how issues and pull requests work.
+We welcome help to make this website better! If you're new to
+contributing to Open Source on Github, [this
+guide](https://guides.github.com/activities/contributing-to-open-source/)
+can help you get started. Please check out the [contribution
+guide](CONTRIBUTING.md) for more details on how issues and pull
+requests work.
 
-###### This repository is just a small subset of work put together by a much larger pool of voluntary efforts contributed by generous people all around the world. Reach out to us through hello@covid19india.org
+###### This repository is just a small subset of work put together by a much larger pool of voluntary efforts contributed by generous people all around the world. Reach out to us through hello@covid19bharat.org
