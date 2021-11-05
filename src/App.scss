@@ -4199,10 +4199,40 @@ footer {
     margin-top: 4rem;
   }
 
+  .about-title {
+      h1 {
+          font-size: 3em !important;;
+          margin-bottom: 1rem;
+          text-transform: none;
+      }
+      margin-bottom: 2rem;
+  }
+
   h2 {
     font-weight: 600;
     margin: 0;
     text-transform: none;
+  }
+
+  .sponsor-img-wrap {
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    width: 100%;
+    a {
+        background: white;
+    }
+  }
+
+  .sponsor-img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+
+  .about-body {
+    color: $gray-dark;
+    margin: 0;
+    margin-bottom: 0.25rem;
   }
 
   .question {
@@ -4214,6 +4244,7 @@ footer {
   .answer {
     color: $blue;
     line-height: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   a {

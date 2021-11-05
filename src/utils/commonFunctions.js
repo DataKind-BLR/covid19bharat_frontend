@@ -3,36 +3,26 @@ import {
   ISO_DATE_REGEX,
   LOCALE_SHORTHANDS,
   STATISTIC_CONFIGS,
-  TESTED_EXPIRING_DAYS,
+  TESTED_EXPIRING_DAYS
 } from '../constants';
 
-import {
-  differenceInDays,
-  format,
-  formatDistance,
-  formatISO,
-  subDays,
-} from 'date-fns';
-import {utcToZonedTime} from 'date-fns-tz';
+import { differenceInDays, format, formatDistance, formatISO, subDays } from 'date-fns';
+import { utcToZonedTime } from 'date-fns-tz';
 import i18n from 'i18next';
 
 let locale = null;
 const numberFormatter = new Intl.NumberFormat('en-IN', {
-  maximumFractionDigits: 1,
+  maximumFractionDigits: 1
 });
 
 const getLocale = () => {
   import('date-fns/locale/').then((localePackage) => {
-    locale =
-      localePackage[
-        LOCALE_SHORTHANDS[i18n.language || window.localStorage.i18nextLng]
-      ];
+    locale = localePackage[LOCALE_SHORTHANDS[i18n.language || window.localStorage.i18nextLng]];
   });
 };
 
 export const isDevelopmentOrTest = () => {
-  if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test')
-    return true;
+  if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') return true;
   return false;
 };
 
@@ -41,7 +31,7 @@ export const getIndiaDate = () => {
 };
 
 export const getIndiaDateISO = () => {
-  return formatISO(getIndiaDate(), {representation: 'date'});
+  return formatISO(getIndiaDate(), { representation: 'date' });
 };
 
 export const getIndiaDateYesterday = () => {
@@ -49,13 +39,13 @@ export const getIndiaDateYesterday = () => {
 };
 
 export const getIndiaDateYesterdayISO = () => {
-  return formatISO(getIndiaDateYesterday(), {representation: 'date'});
+  return formatISO(getIndiaDateYesterday(), { representation: 'date' });
 };
 
 export const formatLastUpdated = (unformattedDate) => {
   getLocale();
   return formatDistance(new Date(unformattedDate), new Date(), {
-    locale: locale,
+    locale: locale
   });
 };
 
@@ -63,10 +53,7 @@ export const parseIndiaDate = (unformattedDate) => {
   if (!unformattedDate) {
     return getIndiaDate();
   }
-  if (
-    typeof unformattedDate === 'string' &&
-    unformattedDate.match(ISO_DATE_REGEX)
-  ) {
+  if (typeof unformattedDate === 'string' && unformattedDate.match(ISO_DATE_REGEX)) {
     unformattedDate += INDIA_ISO_SUFFIX;
   }
   return utcToZonedTime(new Date(unformattedDate), 'Asia/Kolkata');
@@ -74,20 +61,17 @@ export const parseIndiaDate = (unformattedDate) => {
 
 export const formatDate = (unformattedDate, formatString) => {
   if (!unformattedDate) return '';
-  if (
-    typeof unformattedDate === 'string' &&
-    unformattedDate.match(ISO_DATE_REGEX)
-  )
+  if (typeof unformattedDate === 'string' && unformattedDate.match(ISO_DATE_REGEX))
     unformattedDate += INDIA_ISO_SUFFIX;
   const date = utcToZonedTime(new Date(unformattedDate), 'Asia/Kolkata');
   return format(date, formatString, {
-    locale: locale,
+    locale: locale
   });
 };
 
 export const formatDateObjIndia = (dateObj) => {
   return format(dateObj, "yyyy-MM-dd'T'HH:mm:ss+05:30", {
-    locale: locale,
+    locale: locale
   });
 };
 
@@ -102,20 +86,14 @@ export const abbreviateNumber = (number) => {
     return numberFormatter.format(number / 1e7) + 'Cr';
   else if (numberCleaned >= 1e10 && numberCleaned < 1e14)
     return numberFormatter.format(number / 1e10) + 'K Cr';
-  else if (numberCleaned >= 1e14)
-    return numberFormatter.format(number / 1e14) + 'L Cr';
+  else if (numberCleaned >= 1e14) return numberFormatter.format(number / 1e14) + 'L Cr';
 };
 
 export const formatNumber = (value, option = '', statistic) => {
-  if (
-    isNaN(value) ||
-    (statistic && STATISTIC_CONFIGS[statistic]?.hideZero && value === 0)
-  ) {
+  if (isNaN(value) || (statistic && STATISTIC_CONFIGS[statistic]?.hideZero && value === 0)) {
     return '-';
   } else if (option === 'long') {
-    return numberFormatter.format(
-      Math.abs(value) < 1 ? value : Math.round(value)
-    );
+    return numberFormatter.format(Math.abs(value) < 1 ? value : Math.round(value));
   } else if (option === 'short') {
     return abbreviateNumber(value);
   } else if (option === '%') {
@@ -131,7 +109,7 @@ export const capitalize = (s) => {
 };
 
 export const toTitleCase = (str) => {
-  return str.replace(/\w\S*/g, function (txt) {
+  return str.replace(/\w\S*/g, function(txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
 };
@@ -144,7 +122,7 @@ export const getStatistic = (
     expiredDate = null,
     normalizedByPopulationPer = null,
     movingAverage = false,
-    canBeNaN = false,
+    canBeNaN = false
   } = {}
 ) => {
   // TODO: Replace delta with daily to remove ambiguity
@@ -154,10 +132,8 @@ export const getStatistic = (
     if (STATISTIC_CONFIGS[statistic]?.category === 'tested') {
       if (
         !data?.meta?.tested?.date ||
-        differenceInDays(
-          parseIndiaDate(expiredDate),
-          parseIndiaDate(data.meta.tested.date)
-        ) > TESTED_EXPIRING_DAYS
+        differenceInDays(parseIndiaDate(expiredDate), parseIndiaDate(data.meta.tested.date)) >
+        TESTED_EXPIRING_DAYS
       ) {
         return 0;
       }
@@ -211,9 +187,7 @@ export const getStatistic = (
     const confirmedDeltaTwoWeeksAgo = data?.delta21_14?.confirmed || 0;
     val =
       type === 'total'
-        ? 100 *
-          ((confirmedDeltaLastWeek - confirmedDeltaTwoWeeksAgo) /
-            confirmedDeltaTwoWeeksAgo)
+        ? 100 * ((confirmedDeltaLastWeek - confirmedDeltaTwoWeeksAgo) / confirmedDeltaTwoWeeksAgo)
         : 0;
   } else if (statistic === 'population') {
     val = type === 'total' ? data?.meta?.population : 0;
@@ -259,5 +233,4 @@ export function retry(fn, retriesLeft = 5, interval = 1000) {
   });
 }
 
-export const spike = (length, width = 8) =>
-  `M${-width / 2},0L0,${-length}L${width / 2},0`;
+export const spike = (length, width = 8) => `M${-width / 2},0L0,${-length}L${width / 2},0`;
