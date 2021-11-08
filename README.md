@@ -13,17 +13,19 @@ The motivation for this project is the amazing <a href='https://www.covid19india
 pandemic up until October, 2021. Their herculean efforts made an enormous difference,
 and are the foundation for this site.  
 
-The amazing volunteers at covid19india.org have retired, but have also
+The volunteers at covid19india.org have retired, but have also
 generously allowed us to fork their website and pipeline code. This is
 our attempt to carry forward their legacy, but there is no official
 connection or endorsement.
 
 <a href='https://www.datakind.org/chapters/datakind-blr'
-target='_blank'>DataKind Bangalore</a> is leading the volunteer
-effort, with additional support from <a
+target='_blank'>DataKind Bangalore</a> is leading this
+effort, coordinating many dedicated volunteers, with additional support from <a
 href='https://www.devdatalab.org' target='_blank'>Development Data Lab</a>.
 
 ## Setup
+
+To run a local copy of this website, clone the repo, `cd` into it, and:
 
 ```
 yarn install && yarn start

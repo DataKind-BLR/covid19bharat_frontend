@@ -34,23 +34,7 @@ function Footer() {
         </a>
 
         <a
-          href='https://t.me/covid19bharatorg'
-          className='telegram'
-          target='_blank'
-          rel='noopener noreferrer'>
-          <Send />
-        </a>
-
-        <a
-          href='https://twitter.com/covid19bharatorg'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='twitter'>
-          <Twitter />
-        </a>
-
-        <a
-          href='mailto:hello@covid19bharat.org'
+          href='mailto:bangalore@datakind.org'
           className='mail'
           target='_blank'
           rel='noopener noreferrer'>

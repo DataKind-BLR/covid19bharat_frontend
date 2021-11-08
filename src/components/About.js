@@ -27,15 +27,11 @@ function About() {
         <div className='about-title'>
           <h1>Who are we?</h1>
           <h2 className='about-body'>
-            covid19bharat.org is run by{' '}
-            <a href='/volunteers' target='_blank'>
-              volunteers
-            </a>
-            , coordinated by{' '}
+            covid19bharat.org is run by dedicated and generous volunteers, coordinated and led by{' '}
             <a href='https://www.datakind.org/chapters/datakind-blr' target='_blank'>
               DataKind Bangalore
             </a>
-            , with additional support from{' '}
+            with additional support from{' '}
             <a href='https://devdatalab.org' target='_blank'>
               Development Data Lab
             </a>

@@ -12,13 +12,10 @@ function Banner(props) {
         </div>
         <div className='content'>
           {t(
-            'This website is an effort to follow in the footsteps of covid19india.org (THANK YOU!), which has ceased operation. There is no formal connection.'
+            'This website is an effort to follow in the footsteps of covid19india.org, which has ceased operation. There is no formal connection.'
           )}{' '}
         </div>
-        <a
-          href='https://github.com/DataKind-BLR/covid19bharat_frontend'
-          rel='noreferrer'
-          target='_blank'>
+        <a href='/about' rel='noreferrer'>
           {t('Read more')}
           <div className='arrow-right-icon'>
             <ArrowRightIcon size={16} />
