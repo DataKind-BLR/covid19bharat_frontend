@@ -33,11 +33,11 @@ function About() {
             covid19bharat.org is run by dedicated and generous volunteers,
             coordinated and led by{' '}
             <a
-              href="https://www.datakind.org/chapters/datakind-blr"
+              href="https://coda.io/@dkblr/datakind-bengaluru"
               rel="noreferrer"
               target="_blank"
             >
-              DataKind Bangalore
+              DataKind Bengaluru
             </a>
             with additional support from{' '}
             <a href="https://devdatalab.org" rel="noreferrer" target="_blank">
@@ -46,13 +46,13 @@ function About() {
             .
             <div className="sponsor-img-wrap">
               <a
-                href="https://www.datakind.org/chapters/datakind-blr"
+                href="https://coda.io/@dkblr/datakind-bengaluru"
                 rel="noreferrer"
                 target="_blank"
               >
                 <img
                   className="sponsor-img"
-                  src="https://www.datakind.org/static/images/icons/DataKind_orange.png"
+                  src="https://codaio.imgix.net/docs/7FQximSMmu/blobs/bl-Wdxzm6NehM/dc6add7276ba0e36161f3df882e5c0c6cefb75f6f03b438963477840ac709db71d97fb6f4a382c60587d4d44530888a1e37ca8dd0b1a4d2fe2e5e58a8d8692e8d156036c93bb90cfc11be6d894cd24f92ef2ba41bbbad5c1c535a75e79616d24d506f204?auto=format%2Ccompress&fit=max&w=1080&dpr=2"
                 ></img>
               </a>
               <a
