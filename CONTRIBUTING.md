@@ -10,13 +10,7 @@ Always submit a PR against a "Claimed Issue" that's been assigned to you. If an 
 
 - When a new issue is created, "Status: Review Needed" and "Type: Bug or Type: Enhancement" label is automatically added to it.
 - Mods periodically check "Status: Review Needed" and add appropriate Priority and Status labels. If the issue is clear, set the status label as "Status: Available".
-
-![image](https://user-images.githubusercontent.com/27727946/120883947-e25bd900-c5fd-11eb-880e-423b8d20ee49.png)
-
-- People looking to contribute, filter issues by ["Status:Available"](https://github.com/covid19india/covid19india-react/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Available%22) and comment "/claim" on the issue they would like to be assigned to work on.
-
-![image](https://user-images.githubusercontent.com/27727946/120884223-606caf80-c5ff-11eb-998a-a7f2790b9dd4.png)
-
+- People looking to contribute, filter issues by "Status:Available" and comment "/claim" on the issue they would like to be assigned to work on.
 - Finally submit the pull request.
 
 ## Formatting

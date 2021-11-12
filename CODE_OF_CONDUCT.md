@@ -1,5 +1,7 @@
 # Contributor Covenant Code of Conduct
 
+_NOTE: this has been adapted wholesale from the now-defunct covid19india.org. Thank you!_
+
 ## Our Pledge
 
 In the interest of fostering an open and welcoming environment, we as
@@ -55,7 +57,7 @@ further defined and clarified by project maintainers.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at hello@covid19india.org. All
+reported by contacting the project team at bangalore@datakind.org. All
 complaints will be reviewed and investigated and will result in a response that
 is deemed necessary and appropriate to the circumstances. The project team is
 obligated to maintain confidentiality with regard to the reporter of an incident.
