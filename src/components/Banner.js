@@ -12,7 +12,7 @@ function Banner(props) {
         </div>
         <div className="content">
           {t(
-            'This website i¯s an effort to follow in the footsteps of covid19india.org, which has ceased operation. There is no formal connection.'
+            'This website is an effort to follow in the footsteps of covid19india.org, which has ceased operation. There is no formal connection.'
           )}{' '}
         </div>
         <a href="/about" rel="noreferrer">
