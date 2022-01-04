@@ -7,7 +7,7 @@ import {
 import locales from '../i18n/locales.json';
 
 import {useState, useCallback, useRef} from 'react';
-import {HelpCircle, Home, Moon, Sun} from 'react-feather';
+import {HelpCircle, Home, Moon, Sun, BarChart} from 'react-feather';
 import {useTranslation} from 'react-i18next';
 import {Link} from 'react-router-dom';
 import {useTransition, animated} from 'react-spring';
@@ -79,6 +79,11 @@ function Navbar({pages, showLanguageSwitcher, setShowLanguageSwitcher}) {
             <Link to="/">
               <span>
                 <Home {...activeNavIcon('/')} />
+              </span>
+            </Link>
+            <Link to="/analysis">
+              <span>
+                <BarChart {...activeNavIcon('/analysis')} />
               </span>
             </Link>
             <Link to="/about">
