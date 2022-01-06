@@ -92,7 +92,10 @@ function About() {
                 className="faq fadeInUp"
                 style={{animationDelay: `${0.5 + index * 0.1}s`}}
               >
-                <h2 className="question">{faq.question.trim()}</h2>
+                <h2
+                  className="question"
+                  dangerouslySetInnerHTML={{__html: faq.question.trim()}}
+                ></h2>
                 <h2
                   className="answer"
                   dangerouslySetInnerHTML={{__html: faq.answer.trim()}}
