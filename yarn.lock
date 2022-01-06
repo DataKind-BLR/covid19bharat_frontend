@@ -10300,6 +10300,15 @@ prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
+prop-types@^15.7.0:
+  version "15.8.0"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.0.tgz#d237e624c45a9846e469f5f31117f970017ff588"
+  integrity sha512-fDGekdaHh65eI3lMi5OnErU6a8Ighg2KjcjQxO7m8VHyWjcPyj5kiOgV1LQDOOOgVy3+5FgjXvdSSX7B8/5/4g==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
+
 proxy-addr@~2.0.5:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.7.tgz#f19fe69ceab311eeb94b42e70e8c2070f9ba1025"
@@ -10496,6 +10505,13 @@ react-content-loader@^6.0.1:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-6.0.3.tgz#32e28ca7120e0a2552fc26655d0d4448cc1fc0c5"
   integrity sha512-CIRgTHze+ls+jGDIfCitw27YkW2XcaMpsYORTUdBxsMFiKuUYMnlvY76dZE4Lsaa9vFXVw+41ieBEK7SJt0nug==
+
+react-datawrapper-chart@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-datawrapper-chart/-/react-datawrapper-chart-1.1.1.tgz#b9e5bd856c375c45f870014ae4b123710a9553c7"
+  integrity sha512-Br3XrN2uND7SbXxGNHpp7kppIXG9JhvuC8u1ESFSOyGIjX3lhVDDNxvDp3a9DHTUxvKSzlS9j/KxCOKbwQrZ0w==
+  dependencies:
+    prop-types "^15.7.0"
 
 react-dev-utils@^11.0.3:
   version "11.0.4"
