@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  Here's our data <a href="https://api.covid19bharat.org">API</a>.
+  Here's our data <a href="https://data.covid19bharat.org">API</a>.
 </p>
 
 ## Acknowledgements
