@@ -8,6 +8,7 @@ import {Helmet} from 'react-helmet';
 import {useLocation} from 'react-router-dom';
 
 const Footer = lazy(() => retry(() => import('./Footer')));
+const BannerAnalysis = lazy(() => retry(() => import('./BannerAnalysis')));
 
 function Analysis() {
   const location = useLocation();
@@ -25,23 +26,103 @@ function Analysis() {
         />
       </Helmet>
 
+      <BannerAnalysis />
+
       <div className="Home" ref={homeRightElement}>
         {(isVisible || location.hash) && (
           <>
             <div className="home-left">
               <DWChart
-                title="hospitalization-60days"
-                src="https://datawrapper.dwcdn.net/1s4oD/5/"
+                className="analysis-chart"
+                title="delhi-hospitalization"
+                src="https://datawrapper.dwcdn.net/kA9vI/1/"
+              />
+              <DWChart
+                className="analysis-chart"
+                title="delhi-containment-zones"
+                src="https://datawrapper.dwcdn.net/WgMQ1/1/"
               />
             </div>
             <div className="home-right">
               <DWChart
-                title="hospitalization-total"
-                src="https://datawrapper.dwcdn.net/h4L6F/5/"
+                className="analysis-chart"
+                title="delhi-hospitalization-status"
+                src="https://datawrapper.dwcdn.net/LJ10m/1/"
+              />
+              <DWChart
+                className="analysis-chart"
+                title="delhi-rtpcr"
+                src="https://datawrapper.dwcdn.net/NlrvU/1/"
               />
             </div>
           </>
         )}
+      </div>
+      <div className="Home" ref={homeRightElement}>
+        {(isVisible || location.hash) && (
+          <>
+            <div className="home-left">
+              <DWChart
+                className="analysis-chart"
+                title="goa-hospitalization"
+                src="https://datawrapper.dwcdn.net/g7XR5/1/"
+              />
+            </div>
+            <div className="home-right"></div>
+          </>
+        )}
+      </div>
+      <div className="Home" ref={homeRightElement}>
+        {(isVisible || location.hash) && (
+          <>
+            <div className="home-left">
+              <DWChart
+                className="analysis-chart"
+                title="haryana-homeisolation"
+                src="https://datawrapper.dwcdn.net/eVxp8/1/"
+              />
+            </div>
+            <div className="home-right">
+              <DWChart
+                className="analysis-chart"
+                title="haryana-gender-samples"
+                src="https://datawrapper.dwcdn.net/dlD0d/1/"
+              />
+            </div>
+          </>
+        )}
+      </div>
+      <div className="Home" ref={homeRightElement}>
+        {(isVisible || location.hash) && (
+          <>
+            <div className="home-left">
+              <DWChart
+                className="analysis-chart"
+                title="karnataka-gender"
+                src="https://datawrapper.dwcdn.net/CoA4j/1/"
+              />
+            </div>
+            <div className="home-right">
+              <DWChart
+                className="analysis-chart"
+                title="kerala-gender"
+                src="https://datawrapper.dwcdn.net/jbsvt/1/"
+              />
+            </div>
+            <DWChart
+              className="analysis-chart"
+              title="karnataka-gender"
+              src="https://datawrapper.dwcdn.net/DTh1J/1/"
+            />
+          </>
+        )}
+      </div>
+      <div className="Home">
+        <DWChart
+          className="analysis-chart"
+          title="kerala-gender"
+          src="https://datawrapper.dwcdn.net/0nd9j/1/"
+        />
       </div>
 
       {isVisible && (
