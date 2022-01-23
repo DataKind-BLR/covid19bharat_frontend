@@ -89,6 +89,14 @@ export const STATISTIC_CONFIGS = {
     hideZero: true,
     category: 'vaccinated',
   },
+  precautionary: {
+    displayName: 'precautionary doses administered',
+    color: '#fb5581',
+    format: 'short',
+    showDelta: true,
+    hideZero: true,
+    category: 'vaccinated',
+  },
   tpr: {
     displayName: 'test positivity ratio',
     format: '%',
