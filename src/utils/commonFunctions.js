@@ -193,7 +193,8 @@ export const getStatistic = (
   } else if (statistic === 'vaccinated') {
     const dose1 = data?.[type]?.vaccinated1 || 0;
     const dose2 = data?.[type]?.vaccinated2 || 0;
-    val = dose1 + dose2;
+    const booster = data?.[type]?.precautionary || 0;
+    val = dose1 + dose2 + booster;
   } else if (statistic === 'tpr') {
     const confirmed = data?.[type]?.confirmed || 0;
     const tested = data?.[type]?.tested || 0;
