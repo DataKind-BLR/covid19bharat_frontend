@@ -117,29 +117,49 @@ function Level({data}) {
 
   const spring = useSpring({
     total: getStatistic(data, 'total', 'vaccinated'),
+    booster: getStatistic(data, 'total', 'precautionary'),
     // delta: getStatistic(data, 'delta', 'vaccinated'),
     config: SPRING_CONFIG_NUMBERS,
   });
 
   const statisticConfig = STATISTIC_CONFIGS.vaccinated;
+  const boosterConfig = STATISTIC_CONFIGS.precautionary;
 
   return (
-    <div
-      className="level-vaccinated fadeInUp"
-      style={{animationDelay: `${750 + 4 * 250}ms`}}
-    >
-      <ShieldCheckIcon />
-      <animated.div>
-        {spring.total.to((total) => formatNumber(total, 'long'))}
-      </animated.div>
-      {/* <animated.div>
-        {spring.delta.to(
-          (delta) =>
-            `(+ ${formatNumber(delta, 'long')})`
-        )}
-      </animated.div> */}
-      <div>{t(statisticConfig.displayName)}</div>
-    </div>
+    <>
+      <div
+        className="level-vaccinated fadeInUp"
+        style={{animationDelay: `${750 + 4 * 250}ms`}}
+      >
+        <ShieldCheckIcon />
+        <animated.div>
+          {spring.total.to((total) => formatNumber(total, 'long'))}
+        </animated.div>
+        {/* <animated.div>
+          {spring.delta.to(
+            (delta) =>
+              `(+ ${formatNumber(delta, 'long')})`
+          )}
+        </animated.div> */}
+        <div>{t(statisticConfig.displayName)}</div>
+      </div>
+      <div
+        className="level-vaccinated fadeInUp"
+        style={{animationDelay: `${750 + 4 * 250}ms`}}
+      >
+        <ShieldCheckIcon />
+        <animated.div>
+          {spring.booster.to((booster) => formatNumber(booster, 'long'))}
+        </animated.div>
+        {/* <animated.div>
+          {spring.delta.to(
+            (delta) =>
+              `(+ ${formatNumber(delta, 'long')})`
+          )}
+        </animated.div> */}
+        <div>{boosterConfig.displayName}</div>
+      </div>
+    </>
   );
 }
 
