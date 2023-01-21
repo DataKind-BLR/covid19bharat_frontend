@@ -12,7 +12,7 @@ function Banner(props) {
         </div>
         <div className="content">
           {t(
-            'This website is an effort to follow in the footsteps of covid19india.org, which has ceased operation. There is no formal connection.'
+            'covid19india.org is shutting operations for this website. This website won\'t be updated after 31 Jan, 2023. Data until 31st Jan will be accessible. 👋'
           )}{' '}
         </div>
         <a href="/about" rel="noreferrer">
